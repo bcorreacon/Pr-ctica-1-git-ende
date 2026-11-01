@@ -28,7 +28,8 @@ jobs:
 
       - name: Generar Javadoc
         run: |
-          javadoc -d docs -sourcepath . -subpackages . || true
+          mkdir -p docs
+          javadoc -d docs Main.java
 
       - name: Subir artefacto de Pages
         uses: actions/upload-pages-artifact@v3
